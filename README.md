@@ -12,7 +12,7 @@ This repository uses poetry as a dependency manager. See the [installation instr
 ## Instructions
 To run locally you can use poetry install to install the necessary production dependencies and then run api.py using python3.
 ```bash
-poetry install
+poetry install --no-root
 poetry run python3 -m production_plan.api
 ```
 
@@ -21,7 +21,7 @@ This will run the endpoint on http://localhost:8888/production_plan and accepts 
 ## Usage
 An easy way to use the api is through a python shell that has access to the requests module. This is a part of the dev dependencies of the [pyproject.toml](pyproject.toml) file and can be installed using:
 ```bash
-poetry install --with dev
+poetry install --no-root --with dev
 ```
 You can then try out the endpoint with the utility script [call_endpoint.py](call_endpoint.py) that a path to a payload json as an argument.
 ```bash
@@ -31,6 +31,6 @@ poetry run python3 call_endpoint.py example_payloads/payload1.json
 ## Tests
 Unit tests are included for the functions in [payload_solvers.py](production_plan/payload_solvers.py). These can be run with pytest which is part of the development dependencies:
 ```bash
-poetry install --with dev
+poetry install --no-root --with dev
 poetry run pytest
 ```
