@@ -6,7 +6,7 @@ I used FastAPI to create the api for a couple of reasons:
 * pydantic is already integrated so data validation is easy
 * it has integrated test clients that integrate easily with pytest
 
-## Pre-requisites
+## Prerequisites
 This repository uses poetry as a dependency manager. See the [installation instructions](https://python-poetry.org/docs/#installation) for how to install the tool.
 
 ## Instructions
