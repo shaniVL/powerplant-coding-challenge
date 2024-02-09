@@ -18,6 +18,12 @@ poetry run python3 -m production_plan.api
 
 This will run the endpoint on http://localhost:8888/production_plan and accepts jsons in a format similar to the ones in [example_payloads](example_payloads/)
 
+It is also possible to run the api through the docker container:
+```bash
+docker build --rm -t production_plan:latest -f Dockerfile .
+docker run --rm -p 8888:8888 production_plan
+```
+
 ## Usage
 An easy way to use the api is through a python shell that has access to the requests module. This is a part of the dev dependencies of the [pyproject.toml](pyproject.toml) file and can be installed using:
 ```bash
