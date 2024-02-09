@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "powerplant-coding-challenge"
+version = "0.1.0"
+description = "Solution to the powerplant coding challenge by Shani Vanlerberghe"
+authors = ["Shani Vanlerberghe <shani.vanlerberghe@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.109.2"
+uvicorn = {extras = ["standards"], version = "^0.27.0.post1"}
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+black = "^24.1.1"
+mypy = "^1.8.0"
+pylint = "^3.0.3"
+requests = "^2.31.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
