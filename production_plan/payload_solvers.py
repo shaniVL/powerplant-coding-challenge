@@ -18,7 +18,7 @@ def calculate_merit_order(fuels: Fuels, powerplants: list[PowerPlant]) -> list[s
         if powerplant.type == PowerplantType.gasfired:
             merit_order[powerplant.name] = fuels.gas / powerplant.efficiency
         if powerplant.type == PowerplantType.turbojet:
-            merit_order[powerplant.name] = fuels.gas / powerplant.efficiency
+            merit_order[powerplant.name] = fuels.kerosine / powerplant.efficiency
         if powerplant.type == PowerplantType.windturbine and fuels.wind != 0:
             merit_order[powerplant.name] = 0
     sorted_merit_order = dict(sorted(merit_order.items(), key=lambda item: item[1]))
